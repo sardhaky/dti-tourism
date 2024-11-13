@@ -105,3 +105,20 @@ sites.forEach(site => {
     L.marker(site.coords).addTo(map)
         .bindPopup(`<a href="${site.url}" target="_blank">${site.name}</a>`);
 });
+document.getElementById("feedback-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form from submitting normally
+
+    // Get user input
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    // Display feedback in the list
+    const feedbackList = document.getElementById("feedback-list");
+    const feedbackItem = document.createElement("li");
+    feedbackItem.innerHTML = `<strong>${name}</strong> (${email})<br>${message}`;
+    feedbackList.prepend(feedbackItem); // Add to the top of the list
+
+    // Clear form fields
+    document.getElementById("feedback-form").reset();
+});
