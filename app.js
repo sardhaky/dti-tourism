@@ -97,6 +97,37 @@ const sites = [
         name: "Mahabalipuram Temples",
         coords: [12.6117, 80.1972],
         url: "mahabalipuramtemples.html"
+    },
+    // New Temples added
+    {
+        name: "Birla Mandir",
+        coords: [17.4056, 78.4890],
+        url: "birlamandir.html"
+    },
+    {
+        name: "Jagannath Temple",
+        coords: [17.3745, 78.4815],
+        url: "jagannathtemple.html"
+    },
+    {
+        name: "Keesaragutta Temple",
+        coords: [17.5100, 78.4772],
+        url: "keesaraguttatemple.html"
+    },
+    {
+        name: "Chilkur Balaji Temple",
+        coords: [17.2823, 77.9416],
+        url: "chilkurbalajitemple.html"
+    },
+    {
+        name: "Sanghi Temple",
+        coords: [17.4048, 77.6534],
+        url: "sanghitemple.html"
+    },
+    {
+        name: "Sri Ramalingeswara Swamy Temple",
+        coords: [17.3583, 78.5611],
+        url: "sriramalingeswaraswamitemple.html"
     }
 ];
 
@@ -105,6 +136,8 @@ sites.forEach(site => {
     L.marker(site.coords).addTo(map)
         .bindPopup(`<a href="${site.url}" target="_blank">${site.name}</a>`);
 });
+
+// Feedback Form Logic
 document.getElementById("feedback-form").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent form from submitting normally
 
