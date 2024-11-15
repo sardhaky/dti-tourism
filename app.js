@@ -128,6 +128,11 @@ const sites = [
         name: "Sri Ramalingeswara Swamy Temple",
         coords: [17.3583, 78.5611],
         url: "sriramalingeswaraswamitemple.html"
+    },
+    {
+        name: "Tirupati Temple",
+        coords: [13.6288, 79.4192],
+        url: "tirupati.html"
     }
 ];
 
